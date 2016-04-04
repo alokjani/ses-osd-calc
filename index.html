@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SES: OSD Nodes Calculator</title>
+		<style type="text/css">
+		
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			height: 100%; 
+			max-height: 100%; 
+			font-family:Sans-serif;
+			line-height: 1.5em;
+		}
+		
+		#header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100px; 
+			overflow: hidden;
+			background: #C0C0C0;
+		}
+		
+		#logo {
+			padding:10px;
+			float:left;
+		}
+		
+		main {
+			position: fixed;
+			top: 100px; 
+			left: 0; 
+			right: 0;
+			bottom: 0;
+			overflow: auto; 
+			background: #fff;
+		}
+		
+		.innertube {
+			margin: 15px; 
+		}
+		
+		p {
+			color: #555;
+		}
+
+		/* Menu */
+		nav { 
+			margin:0 auto; 
+			padding:0; 
+			float:right;
+		}
+		nav ul { 
+			list-style:none; 
+			padding:0; 
+			float:left;
+		}
+		nav ul li { 
+			margin:0; 
+			padding:0 0 0 8px; 
+			float:left;
+		}
+		nav ul li a { 
+			display:block; 
+			margin:0; 
+			padding:8px 20px; 
+			color:darkgreen; 
+			text-decoration:none;
+		}
+		nav ul li.active a, #top-nav ul li a:hover { 
+			color:#d3d3f9;
+		}
+				
+		/*IE6 fix*/
+		* html body{
+			padding: 100px 0 0 0; 
+		}
+		
+		* html main{ 
+			height: 100%; 
+			width: 100%; 
+		}
+		
+		</style>
+		
+	
+	</head>
+	
+	<body>		
+
+		<header id="header">
+			<div id="logo">
+				<h1>SES: OSD Nodes Calculator</h1>
+			</div>
+			<nav>
+				<div class="innertube">
+				<ul>
+					<li><a href="http://nubla.do/">nubla.do</a></li>
+					<li><a href="https://www.suse.com/documentation/ses-2/">SES Docs</a></li>
+					<li><a href="http://docs.ceph.com/docs/master/">CEPH Docs</a></li>
+				</ul>
+				</div>
+			</nav>
+		</header>
+				
+		<main>
+			<div class="innertube">
+	
+				<!--  <h1>Heading</h1> -->
+				
+				<p>
+				<form method="POST" oninput="resultado.value=Math.round(TBtotal.valueAsNumber / (OSDonnode.valueAsNumber * TBperosd.valueAsNumber * BlockSize.valueAsNumber) * replicas.valueAsNumber)">
+				<input type="number" id="TBtotal" value="1000"> How many TB needs to serve?<br> 
+				<input type="number" id="OSDonnode" value="10"> OSD's total in the node?<br>
+				<input type="number" id="TBperosd" value="20"> TB's of OSD's<br>
+    			<input type="number" id="BlockSize" value=".85"> Block Size?</b><br>
+    			<input type="number" id="replicas" value="3"> Replicas?<br><br>
+    			You need: <b><output name="resultado" for="TBTotal OSDonnode TBperosd BlockSize replicas"></output></b> OSD nodes.<br><br> 
+    			<p>Even more <i>"dirty and quick"</i> bash script available at:</br>
+    			<a href="http://nubla.do/ses-osd-nodes-calculator/">http://nubla.do/ses-osd-nodes-calculator</a></p>
+
+				</form>
+				</p>
+				
+			</div>
+		</main>
+	
+	</body>
+</html>

@@ -1,4 +1,4 @@
-# SUSE Enterprise Storage (SES) OSD Calculator
+# SUSE Enterprise Storage (SES) OSD Nodes Calculator
 
 **Dirty & quick** script used at my post with the same name:  [http://nubla.do/ses-osd-nodes-calculator/](http://nubla.do/ses-osd-nodes-calculator/)
 

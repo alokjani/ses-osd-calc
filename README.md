@@ -4,8 +4,8 @@
 
 Please do not forget read the full documentation: [SES-2](https://www.suse.com/documentation/ses-2/)
 
-Also available "*online*" with the power of the HTML5:
+Also available "*online*" with the power of the HTML5:  
 http://billy.sh/ses-osd-calc/
 
-William Vera
+William Vera  
 hi@billy.mx
